@@ -1,0 +1,9 @@
+sequenceDiagram
+    actor Student
+    participant Playground as Mermaid Playground
+    participant Engine as Mermaid Engine
+
+    Student->>Playground: Edit diagram text
+    Playground->>Engine: Render request
+    Engine-->>Playground: SVG diagram
+    Playground-->>Student: Updated visual output
