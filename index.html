@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diagramming Tools in Computer Science</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <p class="eyebrow">Computer Science Learning Resource</p>
+      <h1>Diagramming Tools in Computer Science</h1>
+      <p class="subtitle">Mermaid and Modern Diagram-as-Code Tools</p>
+      <p class="intro">
+        Mermaid lets students and developers write diagrams using text, making it easy to version,
+        edit, and share architecture and algorithm visuals right next to source code.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel infographic-section" aria-labelledby="infographic-heading">
+      <h2 id="infographic-heading">Diagramming Ecosystem Infographic</h2>
+      <figure>
+        <img src="infographic.png" alt="Infographic comparing code-based and visual diagramming tools" />
+        <figcaption>
+          A quick map of where text-based and visual diagram tools fit in learning, software teams, and enterprise planning.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="tool-grid" aria-labelledby="tool-categories-heading">
+      <h2 id="tool-categories-heading">Tool Categories</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Code-Based Diagram Tools</h3>
+          <ul>
+            <li>Mermaid</li>
+            <li>PlantUML</li>
+            <li>Graphviz</li>
+            <li>D2</li>
+          </ul>
+          <p>
+            Text-based tools are ideal when diagrams should be reviewable in pull requests,
+            stored with source code, and generated in automated workflows.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Visual Diagram Tools</h3>
+          <ul>
+            <li>draw.io / diagrams.net</li>
+            <li>Lucidchart</li>
+            <li>Microsoft Visio</li>
+            <li>Miro / FigJam</li>
+          </ul>
+          <p>
+            Drag-and-drop tools are useful for brainstorming and collaboration where visual editing,
+            sticky notes, and rapid layout changes are more important than code integration.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel usage" aria-labelledby="usage-heading">
+      <h2 id="usage-heading">Usage Comparison by Environment</h2>
+      <div class="usage-grid">
+        <article>
+          <h3>Developer Teams</h3>
+          <p>Mermaid and PlantUML for architecture docs, API flows, and CI-friendly updates.</p>
+        </article>
+        <article>
+          <h3>GitHub / Open Source</h3>
+          <p>Mermaid is common because it renders directly in Markdown and repository documentation.</p>
+        </article>
+        <article>
+          <h3>Universities</h3>
+          <p>Mixed workflows: code diagrams in CS courses and visual tools in design/project classes.</p>
+        </article>
+        <article>
+          <h3>K-12 Classrooms</h3>
+          <p>Visual diagram apps are often easier for younger learners using tablets and touch interfaces.</p>
+        </article>
+        <article>
+          <h3>Enterprise Organizations</h3>
+          <p>Visio and Lucidchart remain common for formal process diagrams and cross-team reporting.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="why-mermaid-heading">
+      <h2 id="why-mermaid-heading">Why Developers Use Mermaid</h2>
+      <ul class="benefits">
+        <li>Diagrams live in source code next to implementation details.</li>
+        <li>Version-control friendly and easy to review in pull requests.</li>
+        <li>Integrates directly with GitHub documentation workflows.</li>
+        <li>Works inside Markdown files and static documentation sites.</li>
+        <li>Easy to generate and iterate with AI coding tools.</li>
+      </ul>
+    </section>
+
+    <section class="panel playground" aria-labelledby="playground-heading">
+      <h2 id="playground-heading">Interactive Mermaid Playground</h2>
+      <p class="section-intro">Edit the Mermaid code and click <strong>Render Diagram</strong>.</p>
+      <div class="playground-grid">
+        <div class="editor-card">
+          <label for="mermaidEditor">Mermaid Editor</label>
+          <textarea id="mermaidEditor" spellcheck="false">flowchart TD
+    A[Start] --> B{Is n > 0?}
+    B -->|Yes| C[Compute Value]
+    B -->|No| D[Stop]</textarea>
+          <button id="renderBtn" type="button">Render Diagram</button>
+          <p class="hint">Tip: try changing node labels or adding more branches.</p>
+        </div>
+        <div class="diagram-card">
+          <h3>Rendered Output</h3>
+          <div id="playgroundDiagram" class="diagram-surface" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel examples" aria-labelledby="examples-heading">
+      <h2 id="examples-heading">Example Diagrams</h2>
+      <p class="section-intro">These examples are loaded from the <code>examples/</code> directory.</p>
+      <div class="example-grid">
+        <article class="example-card">
+          <h3>Flowchart</h3>
+          <div id="example-flowchart" class="diagram-surface"></div>
+        </article>
+        <article class="example-card">
+          <h3>Class Diagram</h3>
+          <div id="example-classdiagram" class="diagram-surface"></div>
+        </article>
+        <article class="example-card">
+          <h3>Sequence Diagram</h3>
+          <div id="example-sequence" class="diagram-surface"></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Created as a learning resource for computer science students exploring diagramming tools.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

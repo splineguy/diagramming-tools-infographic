@@ -1,0 +1,7 @@
+flowchart TD
+    Start([Start]) --> Input[Read Input]
+    Input --> Decision{Valid Data?}
+    Decision -->|Yes| Process[Run Algorithm]
+    Decision -->|No| Retry[Ask Again]
+    Retry --> Input
+    Process --> End([End])

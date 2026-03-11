@@ -1,0 +1,22 @@
+classDiagram
+    class DiagramTool {
+      +name: string
+      +supportsMarkdown: bool
+      +export(format)
+    }
+
+    class Mermaid {
+      +renderLivePreview()
+    }
+
+    class PlantUML {
+      +useServerRenderer()
+    }
+
+    class VisualEditor {
+      +dragAndDropCanvas()
+    }
+
+    DiagramTool <|-- Mermaid
+    DiagramTool <|-- PlantUML
+    DiagramTool <|-- VisualEditor
