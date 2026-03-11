@@ -1,0 +1,137 @@
+:root {
+  --bg: #f4f6f8;
+  --surface: #ffffff;
+  --text: #18212b;
+  --muted: #4f5f70;
+  --line: #d7dfe7;
+  --accent: #2f5f8a;
+  --shadow: 0 12px 28px rgba(21, 36, 51, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  font-family: "Source Sans 3", "Avenir Next", "Segoe UI", sans-serif;
+  line-height: 1.6;
+  background:
+    radial-gradient(circle at 10% 0%, #e3ebf2 0, transparent 35%),
+    radial-gradient(circle at 90% 10%, #e8edf2 0, transparent 30%),
+    var(--bg);
+}
+
+.page {
+  width: min(100%, 1000px);
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+  display: grid;
+  gap: 1.1rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 1.25rem 1.35rem;
+}
+
+.hero {
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  color: #102131;
+  line-height: 1.2;
+  font-family: "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+}
+
+h1 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  margin-bottom: 0.75rem;
+}
+
+h2 {
+  font-size: clamp(1.2rem, 2.1vw, 1.55rem);
+  margin-bottom: 0.85rem;
+}
+
+h3 {
+  font-size: 1.08rem;
+  margin-bottom: 0.55rem;
+}
+
+.subtitle {
+  margin: 0 auto;
+  max-width: 70ch;
+  color: var(--muted);
+}
+
+.infographic img {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #cfd9e2;
+}
+
+.columns {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.panel {
+  background: #f8fafc;
+  border: 1px solid #d8e0e8;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+ul {
+  margin: 0.15rem 0 0;
+  padding-left: 1.15rem;
+}
+
+.usage-grid {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.usage-grid p {
+  margin: 0;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #d7dfe7;
+  border-radius: 9px;
+  background: #fbfcfd;
+}
+
+.checklist li {
+  margin-bottom: 0.35rem;
+}
+
+.site-footer {
+  text-align: center;
+  color: #334457;
+  font-size: 0.95rem;
+  padding: 1.25rem 1rem 2.2rem;
+}
+
+@media (max-width: 740px) {
+  .page {
+    padding-top: 1.2rem;
+  }
+
+  .columns {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 1.05rem 1rem;
+  }
+}
